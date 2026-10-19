@@ -1,0 +1,7 @@
+// Permet d'embarquer la base SQLite (.db) comme asset.
+const { getDefaultConfig } = require('expo/metro-config');
+
+const config = getDefaultConfig(__dirname);
+config.resolver.assetExts.push('db');
+
+module.exports = config;

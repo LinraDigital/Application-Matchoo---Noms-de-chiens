@@ -1,0 +1,8 @@
+<fr-FR>
+Première version de Matchoo – Noms de chiens !
+• Swipez parmi plus de 8 000 noms pour trouver celui de votre chien
+• Filtres : longueur, initiale, nom simple ou composé
+• Testez la sonorité avec votre nom de famille
+• Liste de favoris, partage et comparaison par QR code
+• Fonctionne hors ligne
+</fr-FR>

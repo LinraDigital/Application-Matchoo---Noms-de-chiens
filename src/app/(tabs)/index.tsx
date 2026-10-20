@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { CarteNom, type CarteHandle } from '@/components/CarteNom';
-import { Annuler, Coeur, Croix, Patte, Reglages } from '@/components/Icones';
+import { Annuler, Coeur, Croix, Reglages } from '@/components/Icones';
 import { Bouton } from '@/components/ui';
 import { getNomParNom, tirerNoms } from '@/lib/noms';
 import { compterSwipe } from '@/lib/pubs';
@@ -88,20 +88,13 @@ export default function Decouvrir() {
   return (
     <SafeAreaView style={s.ecran} edges={['top']}>
       <View style={s.entete}>
-        <View style={s.logo}>
-          <View style={s.logoIcone}>
-            <Patte couleur="#fff" taille={22} />
-          </View>
-          <Text style={s.logoTxt}>Matchoo</Text>
-        </View>
+        <Text style={s.logoTxt}>Découvrir</Text>
         <Link href="/filtres" asChild>
           <Pressable style={s.boutonCarre} accessibilityLabel="Filtres">
             <Reglages couleur={C.nuit} taille={22} />
           </Pressable>
         </Link>
       </View>
-
-      <Text style={s.accroche}>Trouvez le nom de votre chien</Text>
 
       <View style={s.puces}>
         {resumeFiltres(filtres).map((t) => (
@@ -191,15 +184,6 @@ const s = StyleSheet.create({
     paddingTop: 8,
     paddingBottom: 8,
   },
-  logo: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  logoIcone: {
-    width: 36,
-    height: 36,
-    borderRadius: 12,
-    backgroundColor: C.accent,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   logoTxt: { fontFamily: F.titre, fontSize: 24, letterSpacing: -0.5, color: C.encre },
   boutonCarre: {
     width: 44,
@@ -209,7 +193,6 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  accroche: { fontFamily: F.titreBold, fontSize: 18, color: C.encre, paddingHorizontal: 20, paddingBottom: 10 },
   puces: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, paddingHorizontal: 20, paddingBottom: 14 },
   puce: {
     paddingHorizontal: 12,
